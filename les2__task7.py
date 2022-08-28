@@ -6,14 +6,6 @@
 
 # здесь я совсем завис, буду позже разбираться
 
-# import random
-
-# k = [random.randint(-10,10) for s in range(10)]
-# print('current list: ', k)
-
-# for
-# mult += k[i]
-
 
     
 

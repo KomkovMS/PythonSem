@@ -14,6 +14,5 @@ result = 0
 for idx in range(1, num + 1):
     result += ((1 + 1/idx) ** idx)
 
-print('Сумма последовательсности n чисел: ', round(result, 3))
-
+print('Сумма последовательности n чисел: ', round(result, 3))
 
