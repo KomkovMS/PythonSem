@@ -8,13 +8,17 @@
 """
 
 # var 1
+
 x = int(input())
 for i in range(-x, x + 1):
     print(i, end = ", ")
 
 # var 2
+
 def f(n):
     for i in range(-n, n + 1):
         print(i, end=', ')
 res = int(input())
+
+
 f(res)

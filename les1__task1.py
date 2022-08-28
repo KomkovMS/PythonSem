@@ -18,3 +18,4 @@ if __name__ == "__main__":
     result = check(int(input('Enter first number: ')),
           int(input('Enter second number ')))
     print(f'Одно число является квадратом другого: {"yes" if result else "no"}')
+    

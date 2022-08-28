@@ -35,6 +35,7 @@ for i in range(1, x + 1):
 # x = 4 + 1 = 5
 # print(k)  // 81
 
+#v.2
 num = int(input('\n'))
 k = 1
 for i in range(0, num):

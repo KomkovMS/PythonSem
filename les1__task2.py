@@ -41,3 +41,11 @@ def getMaxNum(arr):
 arr = [num1, num2, num3, num4, num5]
 print('Так тоже максимальное число будет ', getMaxNum(arr))
 
+# var3 - оптимально
+max = 0
+for _ in range(5):
+    num = int(input('Enter first number'))
+    if num > max:
+        max = num
+
+print(f'max={max}')
