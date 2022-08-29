@@ -12,21 +12,3 @@ for idx in range(len(k)):
 	idx = random.randrange(len(k))
 	shaker.append(k.pop(idx))
 print('mixed list: ', shaker)
-
-
-
-
-
-
-# k = [random.randint(-10,10) for s in range(10)]
-# print(k)
-# print('current list: ', k)
-
-# def shaker(k):
-#     first = 0
-#     last = len(k) - 1
-
-
-# shaker(k)
-
-# print('mixed list: ', k)
