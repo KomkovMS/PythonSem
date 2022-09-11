@@ -26,6 +26,3 @@ for i in range(len(my_list)):
 
 max_num, min_num = max_min(my_list)
 print(f'Большее: {max_num} и меньшее: {min_num}')
-
-
-
