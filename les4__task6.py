@@ -6,14 +6,32 @@
 
 def get_uniq_num(number):
     for num in number:
-        if num not in unique:
-            unique.append(num)
-    return unique
+        if num not in val:
+            val.append(num)
+    return val
 
 
 with open('data_4_32.txt', 'r') as fr:  # 2 -2 1 2
-    unique = []
+    val = []
     for i in fr:
-        unique = get_uniq_num(list(i.split()))
+        val = get_uniq_num(list(i.split()))
         
-print(' '.join(unique)) # 2 -2 1
+print(' '.join(val)) # 2 -2 1
+
+
+# пример решения на семинаре 5
+
+"""import os
+
+file_dir = os.path.abspath(os.path.dirname(__file__))
+file_path = os.path.join(file_dir, "data_4_30.txt")
+
+
+result = set()
+with open(file_path, 'r') as fr:
+    for i in fr:
+        x, y = i.split()
+        result.add(int(x))
+        result.add(int(y))
+
+print(result)  # {0, 1, 2, -1, -2}"""

@@ -7,27 +7,23 @@
 
 """
 
- 
-# оставляю в копилку нерешенных задач
+# пример решения Негофибоначи от Глеба (les5)
+
+def fib(n: int) -> list:
+    result = [0, 1]
+    for i in range(2, n + 1):
+        result.append(result[i - 2] + result[i - 1])
+    return result
 
 
+def neg_fib(lst: list) -> list:
+    result = []
+    for i in range(1, len(lst)):
+        result.append(lst[i] * (-1) ** (i - 1))
+    result = result[::-1]
+    return result + lst
 
 
-
-# Fn = F(n+2)−F(n+1).
-# −n = (−1)n+1Fn
-
-#  Первые 10 чисел последовательности негаФибоначчи:
-
-# n	F(n)
-# −1	1
-# −2	−1
-# −3	2
-# −4	−3
-# −5	5
-# −6	−8
-# −7	13
-# −8	−21
-# −9	34
-# −10	−55
+if __name__ == "__main__":
+    print(f"{neg_fib(fib(8))}")
 
