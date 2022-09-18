@@ -17,33 +17,29 @@ import random
 
 
 def play_game(total, correct_candy, players): 
-    player_choice = 0
     progress = 1
     play = random.choice(players)
     print(f'По результатам жеребьевки начинает игрок: {play}')
     if play == player_1:
         player_choice = 0
     else:
-        player_choice += 1
+        player_choice = 1
     while total > 0:
         if players[player_choice % 2] is not player_2:
             move = int(input(f'Ход №{progress} - {player_1} сколько конфет вы забираете? '))
             print(f'Игрок {player_1} забрал {move} конфет') 
         if players[player_choice % 2] is not player_1:    
-            if progress == 1 or total % 29 == 0: # оставил первый ход случайным 
+            if progress == 1 or total % 29 == 0:
                 move = random.randint(1, 28)
             else:
-                move = total % 29 # условие победы
+                move = total % 29
             print(f'{players[player_choice % 2]} забрал {move} конфет')
         if move > correct_candy or move <= 0:
             print('Вы ввели не корректное значение, повторите ход')
             continue
         else:
             total -= move
-        if total > 0:
-            print(f'Осталось {total} конфет')
-        else:
-            print('Конфеты разобраны')
+        print(f'Осталось {total} конфет') if total > 0 else print('Конфеты разобраны')
         progress += 1 
         player_choice += 1    
     return players[not player_choice % 2]
@@ -52,7 +48,7 @@ def play_game(total, correct_candy, players):
 print('Вас приветствует игра "Конфеты!"')
 
 player_1 = "Maks" # input('первый игрок введите ваше имя\n')
-player_2 = "Сomputer" # input('второй игорок введите ваше имя\n')
+player_2 = "Сomputer"
 players = [player_1, player_2]
 
 user_win = play_game(100, 28, players)
