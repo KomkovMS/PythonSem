@@ -53,3 +53,4 @@ def get_recovery(my_txt):
 recovery = get_recovery(my_txt)
 with open('PythonSem\les5__task6__rec.md', mode='w', encoding='utf-8') as f:
     f.write(recovery)
+
